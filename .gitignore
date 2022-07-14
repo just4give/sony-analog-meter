@@ -31,7 +31,7 @@ npm-debug.log*
 /www
 
 **/index.secure.html
-**/index.html
+**/prod/index.html
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
