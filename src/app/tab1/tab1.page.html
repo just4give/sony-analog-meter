@@ -1,0 +1,146 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar color="medium" >
+    <ion-title>
+      Global Peatland Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content >
+  
+  <ion-content>
+    <ion-row style="height: 300px">
+      <ion-col>
+        <div #Map class="map" ></div>
+      </ion-col>
+      
+    </ion-row>
+    
+    
+  </ion-content>
+  <ion-fab vertical="top" horizontal="start" slot="fixed" >
+    <ion-fab-button color="tertiary" (click)="selectedDevice=undefined">
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card class="floating-card dashboard" *ngIf="!selectedDevice">
+    <ion-card-header color="tertiary">
+      <ion-card-title>HEAT PEOPLE LLC</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="12">
+          <h4>No of Smart Meters</h4>
+          <h1 class="count">{{devices.length}}</h1>
+        </ion-col>
+        
+      </ion-row>
+      <!-- <ion-row>
+        
+        <ion-col size="12">
+          <canvas baseChart 
+            [data]="pieChartData" 
+            [colors]="pieChartColors"
+            [labels]="pieChartLabels" 
+            [chartType]="pieChartType"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            [legend]="pieChartLegend">
+          </canvas>
+        </ion-col>
+      </ion-row> -->
+      <ion-list>
+        <ion-item *ngFor="let d of devices" (click)="selectItem(d)" class="customer-item">
+          <ion-label>
+            <h2>{{d.name}}</h2>
+            <ion-text color="medium"><h4>{{d.addres}}</h4></ion-text>
+            <ion-text color="medium"><h5>IMEI: {{d.imei}}</h5></ion-text>
+            
+          </ion-label>
+          <ion-badge [color]="getBadgeColor(d.oilLevel)">{{d.oilLevel}}%</ion-badge>
+          
+        </ion-item>
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="floating-card device" *ngIf="selectedDevice">
+    <ion-card-header color="tertiary">
+      <ion-card-title>{{selectedDevice.name}}</ion-card-title>
+      <ion-card-subtitle>{{selectedDevice.addres}}</ion-card-subtitle>
+      <ion-card-subtitle>IMEI: {{selectedDevice.imei}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content >
+      <ion-row>
+        <ion-col size="12">
+        <h4>LAST UPDATE AT {{selectedDevice.dt}}</h4>
+      </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4">
+          <h4>Current Oil Level</h4>
+          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        
+        <ion-col size="8">
+          
+          <ngx-gauge [type]="'arch'" 
+            [size]="size"
+            [value]="selectedDevice.oilLevel" 
+            [thick]="20" 
+            [append]="''" 
+            [label] = "' %'"
+            [backgroundColor]="'rgb(158,158,158,0.37)'"
+            [thresholds]="thresholdConfigBat">
+          </ngx-gauge>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <h4>Over the time</h4>
+          <!-- <h1 class="count">{{selectedDevice.oilLevel}}</h1> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+       
+        <ion-col size="8">
+          <h4 *ngIf="sensorDataTemp[0].data" class="text-right">No of records {{sensorDataTemp[0].data.length}}</h4>
+          <canvas baseChart 
+                  [datasets]="sensorDataTemp"
+                  [labels]="sensorDataLabels"
+                  [options]="lineChartOptionsMoisture"
+                  [colors]="lineChartColorsMoisture"
+                  [legend]="lineChartLegendMoisture"
+                  [chartType]="lineChartTypeMoisture"
+                  ></canvas>
+        </ion-col>
+      </ion-row>
+
+      
+
+      
+      
+      <!-- <ion-row>
+        
+        <ion-col size="12">
+          <canvas baseChart 
+            [data]="pieChartData" 
+            [colors]="pieChartColors"
+            [labels]="pieChartLabels" 
+            [chartType]="pieChartType"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            [legend]="pieChartLegend">
+          </canvas>
+        </ion-col>
+      </ion-row> -->
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,65 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.gm-style-iw{
+   
+    color: black;
+}
+
+.info-window{
+    background-color: #000000a1;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5em;
+    min-width: 300px;
+
+    &.normal{
+        background-color : #08b308ab;
+    }
+    &.dry{
+        background-color : #ff9800c9;
+    }
+    &.fire{
+        background-color : #f44336e6;
+    }
+}
+
+.gm-style .gm-style-iw-d {
+    
+    overflow: hidden!important;
+}
+
+.gm-style .gm-style-iw-c{
+    background-color: #000000!important;
+    padding: 12px!important;
+}
+
+.gm-style .gm-style-iw-t::after{
+    background: #000000!important;
+}

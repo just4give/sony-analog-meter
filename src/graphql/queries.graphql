@@ -1,0 +1,147 @@
+# this is an auto generated file. This will be overwritten
+query GetCustomer($id: ID!) {
+  getCustomer(id: $id) {
+    id
+    name
+    addres
+    imei
+    latitude
+    longitude
+    oilLevel
+    customerEmail
+    ts
+    online
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListCustomers(
+  $filter: ModelCustomerFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCustomers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      addres
+      imei
+      latitude
+      longitude
+      oilLevel
+      customerEmail
+      ts
+      online
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncCustomers(
+  $filter: ModelCustomerFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncCustomers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      addres
+      imei
+      latitude
+      longitude
+      oilLevel
+      customerEmail
+      ts
+      online
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetTankLog($id: ID!) {
+  getTankLog(id: $id) {
+    id
+    imei
+    oilLevel
+    rawValue
+    ts
+    ttl
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListTankLogs(
+  $filter: ModelTankLogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTankLogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      imei
+      oilLevel
+      rawValue
+      ts
+      ttl
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncTankLogs(
+  $filter: ModelTankLogFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncTankLogs(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      imei
+      oilLevel
+      rawValue
+      ts
+      ttl
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}

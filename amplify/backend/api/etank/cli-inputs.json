@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "etank",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/mithundas/Project_Workspace/Hackster_Projects/sony_analog_meter/webapp/amplify/backend/api/etank/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 90,
+      "apiKeyExpirationDate": "2022-10-04T23:34:30.078Z",
+      "keyDescription": "etank api key"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}

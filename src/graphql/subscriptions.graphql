@@ -1,0 +1,103 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateCustomer {
+  onCreateCustomer {
+    id
+    name
+    addres
+    imei
+    latitude
+    longitude
+    oilLevel
+    customerEmail
+    ts
+    online
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateCustomer {
+  onUpdateCustomer {
+    id
+    name
+    addres
+    imei
+    latitude
+    longitude
+    oilLevel
+    customerEmail
+    ts
+    online
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteCustomer {
+  onDeleteCustomer {
+    id
+    name
+    addres
+    imei
+    latitude
+    longitude
+    oilLevel
+    customerEmail
+    ts
+    online
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnCreateTankLog {
+  onCreateTankLog {
+    id
+    imei
+    oilLevel
+    rawValue
+    ts
+    ttl
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnUpdateTankLog {
+  onUpdateTankLog {
+    id
+    imei
+    oilLevel
+    rawValue
+    ts
+    ttl
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+subscription OnDeleteTankLog {
+  onDeleteTankLog {
+    id
+    imei
+    oilLevel
+    rawValue
+    ts
+    ttl
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

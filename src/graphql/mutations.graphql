@@ -1,0 +1,121 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateCustomer(
+  $input: CreateCustomerInput!
+  $condition: ModelCustomerConditionInput
+) {
+  createCustomer(input: $input, condition: $condition) {
+    id
+    name
+    addres
+    imei
+    latitude
+    longitude
+    oilLevel
+    customerEmail
+    ts
+    online
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateCustomer(
+  $input: UpdateCustomerInput!
+  $condition: ModelCustomerConditionInput
+) {
+  updateCustomer(input: $input, condition: $condition) {
+    id
+    name
+    addres
+    imei
+    latitude
+    longitude
+    oilLevel
+    customerEmail
+    ts
+    online
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteCustomer(
+  $input: DeleteCustomerInput!
+  $condition: ModelCustomerConditionInput
+) {
+  deleteCustomer(input: $input, condition: $condition) {
+    id
+    name
+    addres
+    imei
+    latitude
+    longitude
+    oilLevel
+    customerEmail
+    ts
+    online
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateTankLog(
+  $input: CreateTankLogInput!
+  $condition: ModelTankLogConditionInput
+) {
+  createTankLog(input: $input, condition: $condition) {
+    id
+    imei
+    oilLevel
+    rawValue
+    ts
+    ttl
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateTankLog(
+  $input: UpdateTankLogInput!
+  $condition: ModelTankLogConditionInput
+) {
+  updateTankLog(input: $input, condition: $condition) {
+    id
+    imei
+    oilLevel
+    rawValue
+    ts
+    ttl
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteTankLog(
+  $input: DeleteTankLogInput!
+  $condition: ModelTankLogConditionInput
+) {
+  deleteTankLog(input: $input, condition: $condition) {
+    id
+    imei
+    oilLevel
+    rawValue
+    ts
+    ttl
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

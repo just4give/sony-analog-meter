@@ -1,0 +1,32 @@
+.map{
+    height: 100vh;
+}
+.text-right{
+    text-align: right;
+}
+
+.floating-card{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    min-height: 500px;
+    min-width: 500px;
+    background-color: #000000ba;
+    text-transform: uppercase;
+    max-height: 600px;
+    .count{
+        font-size: 3em;
+        font-weight: bold;
+        color: white;
+    }
+
+    ion-card-content{
+        padding: 10px 30px;
+        max-height: 550px;
+        overflow: scroll;
+    }
+}
+
+.customer-item :hover{
+    cursor: pointer;
+}
